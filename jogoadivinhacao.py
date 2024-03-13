@@ -2,24 +2,33 @@ print('*********************************')
 print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
 print('*********************************')
 
-#Definindo o numero secreto
-numeroSecreto = 16
+#Definindo o número secreto
+numeroSecreto = 38
 
-#Definindo o numero tentativas
-numerotentativas = 3
+#Definindo o número de tentativas e rodada
+numeroTentativas = 3
+rodada = 1
 
-while(numerotentativas>0):
-     print('ok')
+while(rodada <= numeroTentativas):
+    print('Tentativa',rodada, 'de' , numeroTentativas)
 
 #Recebendo o chute do jogador
-    chuteString=input('Digite um número: ')
-    print('Você digitou o número: ',chuteString)
-    chute=int(chuteString)
+    chuteString = input('Digite um número: ')
+    chute = int(chuteString)
 
-#Declaracao as condições
-    if numeroSecreto == chute:
+#Declarando as condições
+    if (numeroSecreto == chute):
         print('Você acertou!')
+        break
     elif(chute>numeroSecreto):
-        print('Voce errou!! O número secreto é numero menor')
+        print('Você errou!! O número secreto é um número menor')
     else:
-        print('Você errou!! O numero secreto é um número maior')
+        print('Você errou!! O número secreto é um número maior')
+
+    #numeroTentativas = numeroTentativas - 1
+    rodada = rodada + 1
+
+
+
+#Aula Elif 26.02.24
+
