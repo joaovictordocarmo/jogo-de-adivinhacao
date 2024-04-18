@@ -5,16 +5,24 @@ print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
 print('*********************************')
 
 #Definindo o número secreto
-numeroSecreto =  random.randrange(1,101)
-print(numeroSecreto)
+numeroSecreto = random.randrange(1,101) 
+#print(numeroSecreto)
 #Definindo o número de tentativas e rodada
 numeroTentativas = 10
 rodada = 1
 
-print("qual o nivel de dificuldade?")
-print("(1)-Facil, (2)-Medio, (3)-Dificil")
+print("Qual o nível de dificuldade?")
+print("(1)-Fácil, (2)-Médio, (3)-Difícil")
 
-nivel = int(input("defina o nivel:"))
+nivel = int(input("Defina o nível: "))
+
+#Vamos mudar o numero de tentativas conforme a dificuldade
+if(nivel == 1):
+    numeroTentativas = 15
+elif(nivel == 2):
+    numeroTentativas = 8
+else:
+    numeroTentativas = 5
 
 while(rodada <= numeroTentativas):
     print('Tentativa',rodada, 'de' , numeroTentativas)
